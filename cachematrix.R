@@ -4,6 +4,9 @@
 ## Write a short comment describing this function
 
 makeCacheMatrix <- function(x = matrix()) {
+  ## This functon stores a list of functions
+  ## related to setting and getting of a 
+  ## matrix and an inversed matrix.
   
   i <- NULL
   set <- function(y) {
@@ -24,6 +27,10 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
   ## Return a matrix that is the inverse of 'x'
+  ## it searches the cache to see if an inverse 
+  ## matrix has been created before.
+  ## If not, this function "gets" the matrix and
+  ## calculates its inversed matrix.
   i <- x$getin()
   if(!is.null(i)) {
     message("getting cached data")
